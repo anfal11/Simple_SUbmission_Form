@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-div">
+        <h2 style="text-align: center;"> Fill up this Form </h2>
+
+       
+        <form id="my-form">
+           
+            <div class="row">
+                <div class="col">
+                    <label class="control-label">First Name</label>
+                   
+                    <div class="field-control">
+                        <input type="text" name="fName" placeholder="First Name" required onblur="onFieldBlur(this)" />
+                       
+                        <span style="display: none">First Name is required</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label class="control-label">Last Name</label>
+                    <input type="text" name="lName" placeholder="Last Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="control-label">Email Id</label>
+                    <div class="field-control">
+                        <input type="email" name="email" placeholder="Enter valid Email" required
+                            onblur="onFieldBlur(this)" />
+                        <span style="display: none">Enter a valid email</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label class="control-label">Gender</label>
+                    
+                    <label class="radio-control">Male
+                        <input type="radio" name="gender" value="Male" checked />
+                        <span></span>
+                    </label>
+                    <label class="radio-control">Female
+                        <input type="radio" name="gender" value="Female" />
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label class="control-label">Education</label>
+                    <select name="education">
+                        <option value="postGraduate">Post Graduate</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="highschool">Highschool</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <label class="control-label">Job Location</label>
+
+                    <label class="control-checkbox">Dhaka
+                        <input type="checkbox" name="dhaka" value="dhaka" />
+                        <span></span>
+                    </label>
+
+                    <label class="control-checkbox">Chittagong
+                        <input type="checkbox" name="chittagong" value="chittagong" />
+                        <span></span>
+                    </label>
+
+                    <label class="control-checkbox">Rajshahi
+                        <input type="checkbox" name="rajshahi" value="rajshahi" />
+                        <span></span>
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <input type="submit" value="Submit" onclick="onSubmit()" />
+                </div>
+                <div style="margin-left: 10px">
+                    <input type="button" onclick="onReset()" value="Reset" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
